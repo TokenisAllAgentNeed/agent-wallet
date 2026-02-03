@@ -1,0 +1,61 @@
+{
+  "name": "@token2chat/agent-wallet",
+  "version": "0.2.0-beta.1",
+  "description": "AI-first multi-chain wallet library",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "pnpm run build"
+  },
+  "keywords": [
+    "wallet",
+    "crypto",
+    "evm",
+    "ai",
+    "agent"
+  ],
+  "author": "TokenisAllAgentNeed",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TokenisAllAgentNeed/agent-wallet.git"
+  },
+  "homepage": "https://github.com/TokenisAllAgentNeed/agent-wallet#readme",
+  "bugs": {
+    "url": "https://github.com/TokenisAllAgentNeed/agent-wallet/issues"
+  },
+  "dependencies": {
+    "tronweb": "^6.1.1",
+    "viem": "^2.21.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0",
+    "vitest": "^3.0.0"
+  },
+  "pnpm": {
+    "overrides": {
+      "esbuild": ">=0.25.0"
+    }
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
